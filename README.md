@@ -73,4 +73,5 @@
 71. UNet
 72. Classics (ResNet, AlexNet, VGG)
 73. Self-supervised
+74. Multi-modality
     
