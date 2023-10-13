@@ -74,4 +74,5 @@
 72. Classics (ResNet, AlexNet, VGG)
 73. Self-supervised
 74. Multi-modality
+75. Federated learning
     
