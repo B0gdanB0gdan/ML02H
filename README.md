@@ -1,82 +1,84 @@
-# MyAI
+# ML 02H
 
 1. Decision Trees
 2. Random Forest
 3. Support Vector Machines
 4. KNN
-5. K-Means Clustering
-6. Naive Bayes
-7. Neural Networks
-8. MLP
-9. CNN
-10. Attention
-11. Mathematics and Information Theory
-12. Lagrange multipliers
-13. RNN
-14. LSTM
-15. GRU
-16. Gaussian Mixture
-17. Seq2Seq
-18. Probability and statistics
-19. MC
-20. Markov chains
-21. GAN
-22. VAE
-23. VQ-VAE
-24. AE
-25. Loss functions
-26. Activations
-27. CUDA
-28. Production & Deployment
-29. Edge ML
-30. Transformers
-31. Logistic regression
-32. Gradient boosting
-33. Self Organzing Maps
-34. Genetic algorithms
-35. Linear Regression
-36. Optimizers
-37. PCA
-38. ICA
-39. EM algorithm
-40. Recommender systems
-41. SVD
-42. t-SNE
-43. GNN
-44. MLE
-45. MAP
-46. PPO
-47. DQN
-48. SAC
-49. DDPG
-50. TD3
-51. Semantic segmentation
-52. Object detection
-53. Object tracking
-54. Video processing
-55. Text processing
-56. Time series processing
-57. Forecasting
-58. AR
-59. Direct relation learning
-60. Classification
-61. Denoising
-62. Generative AI
-63. Chatbots
-64. Image2Image Translation
-65. Advanced Layers
-66. Computational graphs and Backprop
-67. PyTorch vs TensorFlow
-68. Siamese
-69. Inductive Learning
-70. Fuzzy reasoning
-71. Contrastive learning
-72. NLP toolkit
-73. Distributed training
-74. Style transfer
-75. UNet
-76. Classics (ResNet, AlexNet, VGG)
-77. Self-supervised
-78. Multi-modality
-79. Federated learning
+5. ViT
+6. LLMs
+7. K-Means Clustering
+8. Naive Bayes
+9. Neural Networks
+10. MLP
+11. CNN
+12. Attention
+13. Mathematics and Information Theory
+14. Lagrange multipliers
+15. RNN
+16. LSTM
+17. GRU
+18. Gaussian Mixture
+19. Seq2Seq
+20. Probability and statistics
+21. MC
+22. Markov chains
+23. GAN
+24. VAE
+25. VQ-VAE
+26. AE
+27. Loss functions
+28. Activations
+29. CUDA
+30. Production & Deployment
+31. Edge ML
+32. Transformers
+33. Logistic regression
+34. Gradient boosting
+35. Self Organzing Maps
+36. Genetic algorithms
+37. Linear Regression
+38. Optimizers
+39. PCA
+40. ICA
+41. EM algorithm
+42. Recommender systems
+43. SVD
+44. t-SNE
+45. GNN
+46. MLE
+47. MAP
+48. PPO
+49. DQN
+50. SAC
+51. DDPG
+52. TD3
+53. Semantic segmentation
+54. Object detection
+55. Object tracking
+56. Video processing
+57. Text processing
+58. Time series processing
+59. Forecasting
+60. AR
+61. Direct relation learning
+62. Classification
+63. Denoising
+64. Generative AI
+65. Chatbots
+66. Image2Image Translation
+67. Advanced Layers
+68. Computational graphs and Backprop
+69. PyTorch vs TensorFlow
+70. Siamese
+71. Inductive Learning
+72. Fuzzy reasoning
+73. Contrastive learning
+74. NLP toolkit
+75. Distributed training
+76. Style transfer
+77. UNet
+78. Classics (ResNet, AlexNet, VGG)
+79. Self-supervised
+80. Multi-modality
+81. Federated learning
     
