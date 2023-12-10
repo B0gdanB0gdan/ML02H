@@ -1,4 +1,7 @@
-from typing import NamedTuple, Optional, Any, Union
+from typing import NamedTuple, Optional
+
+from decision_tree.classification_tree.id3c import id3c, classify
+from decision_tree.dt_utils.plot import plot_tree
 
 
 class Candidate(NamedTuple):
@@ -10,7 +13,7 @@ class Candidate(NamedTuple):
 
 
 # level lang tweets phd did_well
-inputs = [
+interview_data = [
     Candidate('Senior', 'Java', False, False, False),
     Candidate('Senior', 'Java', False, True, False),
     Candidate('Mid', 'Python', False, False, True),
@@ -28,15 +31,12 @@ inputs = [
 ]
 
 
-class LeafNode(NamedTuple):
-    value: Any
+if __name__ == "__main__":
+    tree = id3c(interview_data, ['level', 'lang', 'tweets', 'phd'], 'did_well')
+    print(tree)
+    print(classify(tree, Candidate("Junior", "Java", True, False)))
+    print(classify(tree, Candidate("Junior", "Java", True, True)))
+    print(classify(tree, Candidate("Intern", "Java", True, True)))
+    plot_tree(tree)
 
-
-class DecisionNode(NamedTuple):
-    attribute: str
-    subtrees: dict
-    default_value: Any = None
-
-
-DecisionTree = Union[LeafNode, DecisionNode]
 
