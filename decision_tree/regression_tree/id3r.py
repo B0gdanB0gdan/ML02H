@@ -54,7 +54,7 @@ def variance_reduction(samples, attribute, target_attribute):
         children_var = sum([len(subset) / len(samples) *
                             np.var([getattr(sample, target_attribute) for sample in subset]) for subset in partition])
         reductions.append((parent_variance - children_var, threshold))
-    # min performed on reduction but still return tuple
+    # biggest reduction is when children_var is much smaller
     return max(reductions, key=lambda x: x[0])
 
 
