@@ -10,11 +10,9 @@ When to use which traversal?
   problems, multi-source spreading (e.g. Rotting Oranges).
 * DFS (recursion or explicit stack): exploring all paths, detecting cycles,
   connected components, topological sort, backtracking-style path problems.
-* Dijkstra (min-heap): shortest path in a WEIGHTED graph with non-negative
-  weights only.
-* Bellman-Ford: shortest path with possibly NEGATIVE weights, or need to
-  detect negative cycles. Slower (O(V*E)) but more general than Dijkstra.
-* Floyd-Warshall: need ALL-PAIRS shortest paths at once, small graph (V^3 ok).
+* Dijkstra (min-heap): shortest path (one source to all other nodes), cannot handle negative edges
+* Bellman-Ford: shortest path (one source to all other nodes), can handle negative edges
+* Floyd-Warshall: shortest paths between every pair of nodes, can handle negative edges but no negative cyles
 
 The core question to ask first: "am I looking for reachability/existence,
 shortest path, or an ordering (topological)?"
@@ -50,11 +48,4 @@ Common gotchas:
   not one at a time — this is the trick behind Rotting Oranges, 01 Matrix.
 * Grid problems ARE graphs: each cell is a node, edges connect adjacent
   cells — BFS/DFS/Union-Find all apply directly (Number of Islands, etc).
-
-Almost every tree problem can be written as:
-
-        answer_from_left = dfs(node.left)
-        answer_from_right = dfs(node.right)
-
-        combine(left_answer, right_answer)
 """
