@@ -32,21 +32,24 @@ def dijkstra(graph, start):
     # dist from start to start = 0 and from start to every other node is inf
     
     heap = [(0, start)]
+    visited = set()
 
     while heap:
         # pick closest node
         d, node = heapq.heappop(heap) # once we pop node its distance is finalized!
-        # if the new distance (of a node we already found) is worse now ignore this path
-        if d > dist.get(node, float('inf')):
+        # this if prevents leftovers in the heap (we already discovered a better path so it doesnt make sense to continue)
+        if node in visited: 
             continue
+        visited.add(node)
 
         for neighbor, weight in graph[node]:
-            new_dist = d + weight
-            if new_dist < dist.get(neighbor, float('inf')): # relax neighbors
-                # if new distance (prev inf) for the same neighbor is smaller update it
-                # distance from start to this node is new dist
-                dist[neighbor] = new_dist
-                heapq.heappush(heap, (new_dist, neighbor))
+            if neighbor not in visited:
+                new_dist = d + weight
+                if new_dist < dist.get(neighbor, float('inf')): # relax neighbors
+                    # if new distance (prev inf) for the same neighbor is smaller update it
+                    # distance from start to this node is new dist
+                    dist[neighbor] = new_dist
+                    heapq.heappush(heap, (new_dist, neighbor))
 
     return dist
 

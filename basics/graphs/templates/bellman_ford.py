@@ -19,8 +19,15 @@ def bellman_ford(n, edges, start):
     dist = [float('inf')] * n 
     dist[start] = 0 # Everything else is infinity.
 
+    # This happens only in the worst case:
+    # initially only edges that start from start node are updated (1 hop away)
+    # then edges 2 hop away, 3 hop away, etc.
+    # in round 3 if we found a cheaper way through more nodes than previously with 2 nodes we use that longer route
+    # In practice: you can update more edges in one wave
     for _ in range(n - 1):
         for u, v, weight in edges:
+            # relaxing edge (u, v, weight)
+            # if going through u gives a cheaper way to reach v
             if dist[u] + weight < dist[v]:
                 dist[v] = dist[u] + weight
 

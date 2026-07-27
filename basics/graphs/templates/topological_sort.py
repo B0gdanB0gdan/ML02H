@@ -16,6 +16,9 @@ decrement the in-degree of everything it points to (since one of their prerequis
 BFS based
 Time: O(V+E)
 Space: O(V+E)
+
+
+An edge in Kahn's algo is going from a node that comes FIRST to the next that comes SECOND.
 """
 from collections import deque
 
@@ -35,7 +38,7 @@ def topo_sort_kahn(graph, n):
         node = queue.popleft()
         order.append(node) 
         for neighbor in graph[node]:
-            in_degree[neighbor] -= 1
+            in_degree[neighbor] -= 1 # everything that depends on it decreases by 1
             if in_degree[neighbor] == 0:
                 queue.append(neighbor)
 
